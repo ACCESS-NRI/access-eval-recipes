@@ -1,57 +1,33 @@
-# General Repository Template
+# ACCESS Evalulation Recipes
 
-A general template repository for default settings when creating new repositories.
+A loose collection of recipes to validate the performace of ACCESS climate and earth system models. The recipes in this repository are focussed on evaluating and validating model output on broad scales, and might cover energy and water balances at global scales, validation of general trends and identificiation of drift within model output.
 
-This repository uses the Apache-2.0 license. `COPYRIGHT.txt` contains a current copyright statement which should be included at the top of all files.
+At this stage, the format and method for making these recipes is still in refinement and may be revised many times yet. It is assumed they will be run on model output which is for testing/prototyping only and may not be kept long term.
 
-When creating a new repository you [can use this repository as a template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template), to automate the creation of the correct license and COPYRIGHT statement.
+Some suggestions for writing recipes:
+- Use the [access-nri-intake-catalogue](https://github.com/ACCESS-NRI/access-nri-intake-catalog/) if at all possible. For the model output beeing evaluated, you will need to build your own datastore. If you wish to compare against other / previous models, this data should be loaded through the current intake catalogue.
+- Develop recipes using _conda/analysis3_ environment from the hh5 project, unless there is a specific need for something different. Including which environment was used for development in the comments is a good idea. (These are instructions [here](https://access-hive.org.au/model_evaluation/model_evaluation_on_gadi/model_evaluation_on_gadi_pangeo_cosima/) for using hh5)
+- Consider others reading your recipes by using markup and comments.
+- Formatting your recipes through _black_ is good practice
+
+The recipes in this repository are (at this stage) not reviewed.
 
 ## COPYRIGHT Header
 
-Best practice suggests adding a copyright statement at the top of every source code file, or text file where it is possible to add a copyright statement without interfering with the purpose of the file. The reasoning is if a file is separated from the repository in which it resides then it may not be possible to ascertain it's licensing, which may hamper re-use.
-
-Making this as short and concise as possible reduces the overhead in including such a copyright statement. To that end using [SPDX identifiers](https://spdx.dev/ids/) is simple, efficient, portable and machine-readable.
-
-### Examples
-
-An example, short, copyright statement is reproduced below, as it might appear in different coding languages. Copy and add to files as appropriate: 
-
-#### plaintext
-It is common to include copyright statements at the bottom of a text document or website page
-```text
-© 2022 ACCESS-NRI and contributors. See the top-level COPYRIGHT file for details. 
-SPDX-License-Identifier: Apache-2.0
-```
-
-#### python
-For code it is more common to include the copyright in a comment at the top
+Best practice suggests adding a copyright statement at the top of every source code file, e.g. for Python:
 ```python
 # Copyright 2022 ACCESS-NRI and contributors. See the top-level COPYRIGHT file for details.
 # SPDX-License-Identifier: Apache-2.0
 ```
 
-#### shell
-```bash
-# Copyright 2022 ACCESS-NRI and contributors. See the top-level COPYRIGHT file for details.
-# SPDX-License-Identifier: Apache-2.0
-```
 
-##### FORTRAN
-```fortran
-! Copyright 2022 ACCESS-NRI and contributors. See the top-level COPYRIGHT file for details.
-! SPDX-License-Identifier: Apache-2.0
-```
+## Ocean / Sea Ice
 
-#### C/C++ 
-```c
-// Copyright 2022 ACCESS-NRI and contributors. See the top-level COPYRIGHT file for details.
-// SPDX-License-Identifier: Apache-2.0
-```
+There is a [thread](https://forum.access-hive.org.au/t/access-om3-evaluation/1462) on ACCESS-Hive with the planned / discussed plots for evaluation
 
-### Notes
+## Atmosphere
 
-Note that the date is the first time the project is created. 
+## Land
 
-The date signifies the year from which the copyright notice applies. **NEVER** replace with a later year, only ever add later years or a year range. 
+## Ice Sheets
 
-It is not necessary to include subsequent years in the copyright statement at all unless updates have been made at a later time, and even then it is largely discretionary: they are not necessary as copyright is contingent on the lifespan of copyright holder +50 years as per the [Berne Convention](https://en.wikipedia.org/wiki/Berne_Convention).
