@@ -6,7 +6,7 @@ At this stage, the format and method for making these recipes is still in refine
 
 Some suggestions for writing recipes:
 - Use the [access-nri-intake-catalogue](https://github.com/ACCESS-NRI/access-nri-intake-catalog/) if at all possible. For the model output beeing evaluated, you will need to build your own datastore. If you wish to compare against other / previous models, this data should be loaded through the current intake catalogue.
-- Develop recipes using _conda/analysis3_ environment from the hh5 project, unless there is a specific need for something different. Including which environment was used for development in the comments is a good idea.
+- Develop recipes using _conda/analysis3_ environment from the hh5 project, unless there is a specific need for something different. Including which environment was used for development in the comments is a good idea. (These are instructions [here](https://access-hive.org.au/model_evaluation/model_evaluation_on_gadi/model_evaluation_on_gadi_pangeo_cosima/) for using hh5)
 - Consider others reading your recipes by using markup and comments.
 - Formatting your recipes through _black_ is good practice
 
